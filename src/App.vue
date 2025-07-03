@@ -108,8 +108,11 @@ export default {
 
 <template>
     <div class="ctr">
-        <questions v-if="questionsAnswered < questions.length" :questions="questions" :questionsAnswered="questionsAnswered" @question-answered="questionAnswered"/>
-        <result v-else :results="results" :totalCorrect="totalCorrect" />
+        <transition name="fade" mode="out-in">
+            <questions v-if="questionsAnswered < questions.length" :questions="questions" :questionsAnswered="questionsAnswered" @question-answered="questionAnswered"/>
+            <result v-else :results="results" :totalCorrect="totalCorrect" />
+        </transition>
+
         <button type="button" class="reset-btn" @click.prevent="resetQuiz" v-if="this.questionsAnswered === questions.length">Reset</button>
     </div>
 </template>
