@@ -68,7 +68,6 @@ body {
     background-color: #ff6372;
     transition: all 0.3s linear;
     border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
 }
 
 .status {
@@ -99,6 +98,8 @@ body {
     background-color: #12cbc4;
     color: #fff;
     box-sizing: border-box;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .desc {
